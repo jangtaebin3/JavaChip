@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SignUp.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <div class="background">
+        <header> 
+            <img src="../../../assets/images/Logo.png" alt="Logo" class="Logo" > 
+            <p id="LogoText">돈바라기</p>  
+        </header>
+        
+        <main> <!-- 연습 -->
+            <div class="SignUpBox">
+                <h2>회원가입</h2>
+                
+                <form action="../Success/Success.html" method="get">
+                    <div class="idpw">
+                        <input type="text" id="username" class="InputBox" name="username" required placeholder="아이디">
+                        <input type="password" id="password" class="InputBox" name="password" required placeholder="비밀번호">
+                    </div>
+                    <div class="UserInfo">
+                        <input type="text" id="name" class="InputBox" name="name" required placeholder="이름">
+                        <input type="text" id="nickname" class="InputBox" name="nickname" required placeholder="닉네임">
+                        <input type="email" id="email" class="InputBox" name="email" required placeholder="이메일">
+                    </div>
+
+                    <div class="checkboxes">
+                        <label>
+                            <input type="checkbox" name="terms" required>
+                            서비스 이용약관에 동의합니다
+                        </label>
+                        <label>
+                            <input type="checkbox" name="privacy" required>
+                            개인정보처리방침에 동의합니다
+                        </label>
+                    </div>
+    
+                    <div class="Button">
+                        <button type="submit" class="SignUpButton">회원가입하기</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="Copyright">
+                <p id="classified">© 2024, 눈바라기. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

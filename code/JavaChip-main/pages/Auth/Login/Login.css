@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard-Regular', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contents {
+    width: 100%;
+    max-width: 1440px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+header {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+header p {
+    font-size: 54px;
+    font-weight: 900;
+    position: absolute;
+    top:-53px;
+    left: 121px;
+}
+
+.Logo {
+    position: absolute;
+    float: left;
+    width: 60px;
+    height: 60px;
+
+    left: 52px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Login {
+    width: 432px;
+    height: 450px;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px 70px;
+    text-align: left;
+}
+
+#LoginText {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.LoginInput input {
+    width: calc(100% - 32px);
+    height: 38px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.ForgotIdPw {
+    text-align: left;
+}
+
+.ForgotIdPw a {
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+#LoginButton input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #FFCC01;
+    color: #00000099;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 0;
+}
+
+#LoginButton input:hover {
+    background-color: #715B00;
+    transition: 0.3s;
+}
+
+#SignUp {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#SignUp a {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.Copyright {
+    color: #000000;
+    font-size: 12px;
+}
