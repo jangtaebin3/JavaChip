@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const path = require('path');
 app.use(express.static(path.join(__dirname, '../pages'))); //정적파일 위함
+app.use('/assets', express.static(path.join(__dirname, '../assets')));
 app.use('/scripts', express.static(path.join(__dirname, './scripts'))); //js 파일 위함
 
 //몽고db 연결
