@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard-Regular', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background {
+    width: 100%;
+    max-width: 1440px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+header {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+#LogoText {
+    font-size: 54px;
+    font-weight: 900;
+    position: absolute;
+    top:-53px;
+    left: 121px;
+}
+
+.Logo {
+    position: absolute;
+    float: left;
+    width: 60px;
+    height: 60px;
+    left: 52px;
+}
+
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.SignUpBox {
+    width: 432px;
+    height: auto;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    background: #1A1A16;
+    box-shadow: 0px 0px 54px 16px rgba(0, 0, 0, 0.25);
+    padding: 40px 70px;
+}
+
+.center_container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.idpw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    row-gap: 16px;
+}
+
+.UserInfo {
+    margin-top: 33px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    row-gap: 16px;
+}
+
+.InputBox {
+    border-radius: 10px;
+
+    width: 400px;
+    display: flex;
+    height: 20px;
+    padding: 14px 16px;
+    align-items: center;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.Button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.SignUpButton {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #FFCC01;
+    color: #00000099;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.SignUpButton:hover {
+    background-color: #715B00;
+    transition: 0.3s;
+}
+
+/* button 스타일 */
+button {
+    display: flex;                /* 버튼 내부 요소를 플렉스 컨테이너로 설정 */
+    align-items: center;          /* 세로 중앙 정렬 */
+    justify-content: center;      /* 가로 중앙 정렬 */
+    width: 100%;                  /* 버튼의 너비를 조정 */
+    padding: 10px 20px;           /* 버튼 안쪽 여백 */
+    font-size: 16px;              /* 글자 크기 */
+    cursor: pointer;              /* 클릭 가능하게 포인터 변경 */
+    border: none;                 /* 버튼 테두리 제거 */
+    background-color: #FFD700;    /* 버튼 배경색 예시 */
+    color: #FFFFFF;                  /* 글자색 예시 */
+    box-sizing: border-box;       /* 패딩을 포함하여 너비를 계산 */
+}
+
+
+h1 {
+    color: #000000;
+    font-family: "Pretendard Variable";
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+h2 {
+    color: #FFF;
+    font-family: "Pretendard Variable";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 0 41px 0;
+}
+
+label {
+    color: #FFF;
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.Copyright {
+    color: #000000;
+    font-size: 12px;
+}
