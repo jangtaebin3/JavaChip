@@ -56,3 +56,6 @@ app.post('/saveacc',function(req,res){
       res.status(200).send(); // js 에게 성공했다고 알려서 다음 창으로 넘어가게 하기
     })
   });
+
+  //한번 연습
+  
