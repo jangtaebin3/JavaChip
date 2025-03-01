@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => {
             if (response.ok) {
                 // 저장 성공 시 Success 페이지로 이동
-                window.location.href = '/Auth/Success/Success.html';
+                window.location.href = '/auth/Success/Success.html';
             }
         })
         .catch(error => {

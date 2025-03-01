@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./SignUp.css">
+    <link rel="stylesheet" href="/auth/SignUp/SignUp.css">
+    <script src="/scripts/SignUp.js"></script>
+
     <title>회원가입</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
             <div class="SignUpBox">
                 <h2>회원가입</h2>
                 
-                <form action="../Success/Success.html" method="get">
+                <form id="signupForm"  method="get">
                     <div class="idpw">
                         <input type="text" id="username" class="InputBox" name="username" required placeholder="아이디">
                         <input type="password" id="password" class="InputBox" name="password" required placeholder="비밀번호">
