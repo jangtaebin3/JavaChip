@@ -1,0 +1,176 @@
+.popularContainer {
+  width: 1365px;
+  height: 890px;
+  padding: 51px 44px 84px 54px;
+  display: flex;
+  gap: 39px;
+}
+
+.CommunitySection {
+  display: flex;
+  width: 988px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 968px;
+  height: 51px;
+  align-self: stretch;
+  padding: 0 20px 0 0;
+  border-bottom: 1px solid #B2B2B2;
+
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.post-title {
+  flex: 2;
+}
+
+.post-author {
+  flex: 1;
+  text-align: center;
+}
+
+.post-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.post-likes,
+.post-save {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-likes img,
+.post-save img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+
+
+.ProfileSection {
+  display: flex;
+  width: 240px;
+  height: 759px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+  margin: 51px 0 0;
+}
+
+.profile {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.MyProfile {
+  display: flex;
+  text-align: start;
+  margin: 0;
+  flex: 1 0 0;
+
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.avatar {
+  align-self: center;
+  width: 153px;
+  height: 153px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.username {
+  align-self: center;
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.write-btn {
+  width: 240px;
+  border-radius: 10px;
+  background-color: #FFCC01;
+  border: none;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.MyActivityTitle {
+  margin: 0;
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.activity-btn {
+  border-radius: 10px;
+  background: #202020;
+
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  text-align: left;
+
+  font-family: "Pretendard Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 페이지</title>
+    <link rel="stylesheet" href="popular.css">
+</head>
+<body>
+    <div class="popularContainer">
+        <div class="CommunitySection">
+            <h2>커뮤니티</h2>
+            <ul class="post-list">
+                <li class="post-item">
+                    <span class="post-title">게시글 제목</span>
+                    <span class="post-author">작성자</span>
+                    <div class="post-icons">
+                        <span class="post-likes">56 <img src="../../../assets/images/loveIcon.png" alt="좋아요"></span>
+                        <span class="post-save"><img src="../../../assets/images/saveIcon.png" alt="저장"></span>
+                    </div>
+                </li>
+                <li class="post-item">
+                    <span class="post-title">게시글 제목</span>
+                    <span class="post-author">작성자</span>
+                    <div class="post-icons">
+                        <span class="post-likes">56 <img src="../../../assets/images/loveIcon.png" alt="좋아요"></span>
+                        <span class="post-save"><img src="../../../assets/images/saveIcon.png" alt="저장"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ProfileSection">
+            <div class="profile">
+                <p class="MyProfile">내 프로필</p>
+                <img src="../../../assets/images/userIcon.png" alt="사용자 프로필" class="avatar">
+                <span class="username">사용자 이름</span>
+            </div>
+            <div class="write">
+                <button class="write-btn" onclick="location.href='../writing/writing.html'">글 작성하기</button>
+            </div>
+            <div class="activity">
+                <p class="MyActivityTitle"><a href="../myActivity/myActivity.html">내 활동 ></a></p>
+                <button class="activity-btn">내가 쓴 글 <span>12</span></button>
+                <button class="activity-btn">내가 쓴 댓글 <span>35</span></button>
+                <button class="activity-btn">저장된 글 <span>7</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
