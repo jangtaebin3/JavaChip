@@ -21,7 +21,7 @@
                     
                     <li class="CheckList"><a href="#">체크리스트</a></li>
                     
-                    <li class="Community"><a href="#">커뮤니티</a></li>
+                    <li class="Community"><a href="#" onclick="loadPage('popular.html')">커뮤니티</a></li>
                 </ul>
                 <div class="img">
                     <img src="./Component/Search.png"alt="Search" class="Search">
@@ -39,8 +39,14 @@
         </main>
         
         <footer>
-
+            <iframe id="contentFrame" src="" width="100%" height="900px" frameborder="0"></iframe>
         </footer>
     </div>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById("contentFrame").src = page;
+        }
+    </script>
 </body>
 </html>
