@@ -29,13 +29,18 @@
   marker: none;
 }
 
+.navItem:hover {
+  color: #FFCC01;
+  cursor: pointer;
+}
+
 .navRight {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 45px;
 
+  margin-left: 120px;
   height: 25px;
   width: 25px;
 }

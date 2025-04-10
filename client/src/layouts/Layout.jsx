@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import NavigationBar from "./navigationBar/navigationBar.jsx";
+import "./Layout.css";
 
 const Layout = () => {
   return (
-    <div className="app-container">
+    <div className="layout">
       <NavigationBar />
-      <main className="main-content">
+      <main className="mainContent">
         <Outlet />
       </main>
     </div>
