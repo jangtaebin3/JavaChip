@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import NavigationBar from "./navigationBar";
+import NavigationBar from "./navigationBar/navigationBar.jsx";
 
 const Layout = () => {
   return (

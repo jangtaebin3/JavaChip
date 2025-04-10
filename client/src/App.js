@@ -1,7 +1,7 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./layouts/navigationBar/Layout.jsx";
+import Layout from "./layouts/Layout.jsx";
 
 
 function App() {
