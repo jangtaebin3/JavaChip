@@ -1,9 +1,25 @@
 // components/NavigationBar.jsx
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './navigationBar.css';
 import userIcon from '../../assets/images/userIcon.svg';
 import alertIcon from '../../assets/images/alertIcon.svg';
 import globeIcon from '../../assets/images/globeIcon.svg';
+
+const MenuItem = ({ to, label }) => {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? "MenuItem Active" : "MenuItem")}
+    >
+      {({ isActive }) => (
+        <>
+          {label}
+        </>
+      )}
+    </NavLink>
+  );
+};
 
 const navigationBar = () => {
   return (
@@ -12,11 +28,11 @@ const navigationBar = () => {
         <div className="logo"></div>
       </div>
       <ul className="navMenu">
-        <li className="navItem">캘린더</li>
-        <li className="navItem">지출 목록</li>
-        <li className="navItem">지출 분석</li>
-        <li className="navItem">체크리스트</li>
-        <li className="navItem active">커뮤니티</li>
+        <li><MenuItem to="/calendar" label="캘린더" /></li>
+        <li><MenuItem to="/expenses" label="지출 목록" /></li>
+        <li><MenuItem to="/analysis" label="지출 분석" /></li>
+        <li><MenuItem to="/checklist" label="체크리스트" /></li>
+        <li><MenuItem to="/community" label="커뮤니티" /></li>
       </ul>
       <div className="navRight">
         <img src={alertIcon} alt="Alert" className="navIcon alertIcon" />

@@ -25,13 +25,13 @@
   margin: 0;
 }
 
-.navItem {
-  marker: none;
+.MenuItem {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-.navItem:hover {
+.MenuItem:hover, .MenuItem:focus {
   color: #FFCC01;
-  cursor: pointer;
 }
 
 .navRight {
