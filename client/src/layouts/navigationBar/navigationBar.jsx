@@ -10,13 +10,9 @@ const MenuItem = ({ to, label }) => {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => (isActive ? "MenuItem Active" : "MenuItem")}
+      className={({ isActive }) => (isActive ? "MenuItem active" : "MenuItem")}
     >
-      {({ isActive }) => (
-        <>
-          {label}
-        </>
-      )}
+      {label}
     </NavLink>
   );
 };

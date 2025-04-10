@@ -30,7 +30,11 @@
   text-decoration: none;
 }
 
-.MenuItem:hover, .MenuItem:focus {
+.MenuItem.active {
+  color: #FFCC01;
+} 
+
+.MenuItem:hover {
   color: #FFCC01;
 }
 
