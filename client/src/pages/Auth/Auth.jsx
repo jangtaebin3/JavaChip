@@ -1,10 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import './Auth.css';
 
 const Auth = () => {
   return (
     <div>
-      <h1>Auth</h1>
+      <Outlet />
     </div>
   );
 }
