@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../../components/common/input/input.jsx";
+import "./Register.css";
 
 const Register = () => {
   const [form, setForm] = useState({
