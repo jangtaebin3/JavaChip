@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../../../components/common/input/input.jsx";
 import "./Register.css";
 
@@ -13,6 +14,8 @@ const Register = () => {
     privacy: false,
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((prev) => ({
@@ -24,7 +27,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // 회원가입 처리 로직 추가
-    alert("회원가입 완료!");
+    navigate("/auth/success");
   };
 
   return (
