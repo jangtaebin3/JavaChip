@@ -3,6 +3,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout.jsx";
 import Auth from "./pages/Auth/Auth.jsx"
+import Login from "./pages/Auth/Login/Login.jsx";
+import Register from "./pages/Auth/SignUp/Register.jsx";
+
 
 
 function App() {
@@ -16,9 +19,11 @@ function App() {
           <Route path="checklist" element={<h1>ChecklistPage</h1>} />
           <Route path="community" element={<h1>CommunityPage</h1>} />
         </Route>
-        <Route path="/auth" element={<h1>Auth</h1>}>
-          <Route path="login" element={<h1>LoginPage</h1>} />
-          <Route path="register" element={<h1>RegisterPage</h1>} />
+      </Routes>
+      <Routes>
+        <Route path="/auth" element={<Auth />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </Router>
