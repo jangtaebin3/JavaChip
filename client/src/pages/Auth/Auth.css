@@ -1,0 +1,30 @@
+.authContainer {
+
+  width: 100%;
+  height: 100vh;
+  background-color: #484339;
+  padding: 48px 52px;
+}
+
+#Logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#logoTitle {
+  color: #FFF;
+  font-family: "Pretendard Variable";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+}
+
+.authContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
