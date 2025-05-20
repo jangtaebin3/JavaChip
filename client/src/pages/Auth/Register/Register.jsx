@@ -32,7 +32,7 @@ const Register = () => {
 
   return (
     <div className="SignUpBox">
-      <h2>회원가입</h2>
+      <p id="registerTitle">회원가입</p>
       <form onSubmit={handleSubmit}>
         <div className="idpw">
           <Input
@@ -89,7 +89,7 @@ const Register = () => {
           />
         </div>
         <div className="checkboxes">
-          <label>
+          <label className="checkboxLabel">
             <input
               type="checkbox"
               name="terms"
@@ -99,7 +99,7 @@ const Register = () => {
             />
             서비스 이용약관에 동의합니다
           </label>
-          <label>
+          <label className="checkboxLabel">
             <input
               type="checkbox"
               name="privacy"
@@ -110,8 +110,8 @@ const Register = () => {
             개인정보처리방침에 동의합니다
           </label>
         </div>
-        <div className="Button">
-          <button type="submit" className="SignUpButton">
+        <div className="registerButtonField">
+          <button type="submit" className="registerButton">
             회원가입하기
           </button>
         </div>
