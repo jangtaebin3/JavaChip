@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout.jsx";
 import Auth from "./pages/Auth/Auth.jsx";
 import Login from "./pages/Auth/Login/Login.jsx";
-import Register from "./pages/Auth/SignUp/Register.jsx";
+import Register from "./pages/Auth/Register/Register.jsx";
 
 function App() {
   return (
