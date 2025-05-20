@@ -20,7 +20,7 @@ function App() {
         <Route path="/auth" element={<Auth />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="success" element={<h1>Success</h1>} />
+          <Route path="success" element={<Success />} />
         </Route>
       </Routes>
     </Router>
