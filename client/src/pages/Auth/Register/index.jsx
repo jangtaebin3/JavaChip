@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Input from "../../../components/common/input/input.jsx";
+import Input from "../../../components/common/input";
 import "./style.css";
 
 const Register = () => {
