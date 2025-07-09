@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../../components/common/input/input.jsx";
-import "./Register.css";
+import "./style.css";
 
 const Register = () => {
   const [form, setForm] = useState({

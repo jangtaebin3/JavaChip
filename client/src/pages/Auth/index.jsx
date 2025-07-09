@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import logo from "../../assets/images/logo.svg"
-import './Auth.css';
+import './style.css';
 
 const Auth = () => {
   return (

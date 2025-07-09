@@ -2,9 +2,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout.jsx";
-import Auth from "./pages/Auth/Auth.jsx";
-import Login from "./pages/Auth/Login/Login.jsx";
-import Register from "./pages/Auth/Register/Register.jsx";
+import Auth from "./pages/Auth";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
 
 function App() {
   return (
