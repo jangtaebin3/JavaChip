@@ -1,9 +1,16 @@
-.authContainer {
-
-  width: 100%;
+.authWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: #484339;
-  padding: 48px 52px;
+}
+
+.authContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #484339;
+  padding: 0 52px;
 }
 
 #Logo {
@@ -11,6 +18,8 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  margin-top: 48px;
+  margin-bottom: 84px;
 }
 
 #logoTitle {
@@ -27,4 +36,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.authFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#footerText {
+  color: #fff;
+  font-family: "inter";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
 }

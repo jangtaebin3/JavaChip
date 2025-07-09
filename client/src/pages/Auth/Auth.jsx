@@ -5,7 +5,7 @@ import './Auth.css';
 
 const Auth = () => {
   return (
-    <div>
+    <div className="authWrapper">
       <div className="authContainer">
         <div id="Logo">
           <img src={logo} alt="Logo" />
@@ -13,6 +13,9 @@ const Auth = () => {
         </div>
         <div className="authContent">
           <Outlet />
+        </div>
+        <div className="authFooter">
+          <p id="footerText">© 2023 돈바라기. All rights reserved.</p>
         </div>
       </div>
     </div>
