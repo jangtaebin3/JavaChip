@@ -5,55 +5,7 @@
     font-style: normal;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pretendard-Regular', sans-serif;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.contents {
-    width: 100%;
-    max-width: 1440px;
-    height: 1024px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #FFFFFF;
-}
-
-header {
-    position: absolute;
-    top: 70px;
-    left: 0px;
-    color: #000000;
-    white-space: nowrap;
-}
-
-header p {
-    font-size: 54px;
-    font-weight: 900;
-    position: absolute;
-    top:-53px;
-    left: 121px;
-}
-
-.Logo {
-    position: absolute;
-    float: left;
-    width: 60px;
-    height: 60px;
-
-    left: 52px;
-}
-
-main {
+.loginWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,24 +14,26 @@ main {
 }
 
 .Login {
-    width: 432px;
-    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 574px;
+    height: 344px;
     background-color: #1E1E1E;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 40px 70px;
+    padding-top: 40px;
     text-align: left;
 }
 
-#LoginText {
-    font-size: 40px;
-    font-weight: bold;
-    color: #FFFFFF;
-    margin-top: 0;
+.LoginInput {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .LoginInput input {
-    width: calc(100% - 32px);
+    width: 432px;
     height: 38px;
     border-radius: 10px;
     margin: 10px 0;
@@ -90,18 +44,20 @@ main {
     background-color: #FFFFFF;
 }
 
+
 .ForgotIdPw {
+    width: 432px;
     text-align: left;
 }
 
 .ForgotIdPw a {
-    font-size: 15px;
+    font-size: 12px;
     color: #FFFFFF;
 }
 
 #LoginButton input {
-    width: 100%;
-    height: 50px;
+    width: 432px;
+    height: 52px;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -110,7 +66,7 @@ main {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0;
 }
 
@@ -125,18 +81,6 @@ main {
 }
 
 #SignUp a {
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-footer {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.Copyright {
-    color: #000000;
     font-size: 12px;
+    color: #FFFFFF;
 }

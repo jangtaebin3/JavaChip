@@ -44,7 +44,6 @@
   align-items: center;
   position: absolute;
   bottom: 0;
-  width: 100%;
   margin-bottom: 50px;
 }
 
@@ -56,4 +55,5 @@
   font-weight: 400;
   line-height: normal;
   margin: 0;
+  width: 100%;
 }

@@ -5,6 +5,7 @@ import Layout from "./layouts";
 import Auth from "./pages/Auth";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
+import Success from "./pages/Auth/Success";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/auth" element={<Auth />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="success" element={<h1>Success</h1>} />
+          <Route path="success" element={<Success />} />
         </Route>
       </Routes>
     </Router>
