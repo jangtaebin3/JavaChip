@@ -9,7 +9,7 @@
 
 .mainContent {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 145px);
   background-color: #FFFFFF;
   border-radius: 20px;
 }
