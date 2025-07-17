@@ -1,13 +1,16 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.svg"
 import './style.css';
 
 const Auth = () => {
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/auth/login";
+
   return (
     <div className="authWrapper">
       <div className="authContainer">
-        <div id="Logo">
+        <div id="Logo" className={isLoginPage ? "logoLogin" : ""}>
           <img src={logo} alt="Logo" />
           <p id="logoTitle">돈바라기</p>
         </div>

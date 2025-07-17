@@ -52,7 +52,7 @@ const Login = () => {
           </div>
 
           <div id="SignUp">
-            <Link href="#">돈바라기가 처음이신가요? &gt;</Link>
+            <Link to="/auth/register">돈바라기가 처음이신가요? &gt;</Link>
           </div>
         </form>
       </div>
