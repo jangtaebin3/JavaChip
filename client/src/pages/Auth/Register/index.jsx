@@ -41,7 +41,7 @@ const Register = () => {
             className="InputBox"
             name="username"
             required
-            placeholder="아이디"
+            placeholder="아이디*"
             value={form.username}
             onChange={handleChange}
           />
@@ -51,7 +51,7 @@ const Register = () => {
             className="InputBox"
             name="password"
             required
-            placeholder="비밀번호"
+            placeholder="비밀번호*"
             value={form.password}
             onChange={handleChange}
           />
@@ -63,7 +63,7 @@ const Register = () => {
             className="InputBox"
             name="name"
             required
-            placeholder="이름"
+            placeholder="이름*"
             value={form.name}
             onChange={handleChange}
           />
@@ -73,7 +73,7 @@ const Register = () => {
             className="InputBox"
             name="nickname"
             required
-            placeholder="닉네임"
+            placeholder="닉네임*"
             value={form.nickname}
             onChange={handleChange}
           />
@@ -83,7 +83,7 @@ const Register = () => {
             className="InputBox"
             name="email"
             required
-            placeholder="이메일"
+            placeholder="이메일*"
             value={form.email}
             onChange={handleChange}
           />
