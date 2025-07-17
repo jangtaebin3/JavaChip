@@ -1,0 +1,13 @@
+.mainPage {
+  padding: 40px;
+  color: #FFFFFF;
+}
+
+.mainPage h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.mainPage p {
+  font-size: 18px;
+}
