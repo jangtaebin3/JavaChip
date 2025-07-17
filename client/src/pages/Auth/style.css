@@ -22,6 +22,20 @@
   margin-bottom: 84px;
 }
 
+#Logo.logoLogin {
+  margin-top: 200px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#Logo.logoLogin img {
+  display: none;
+}
+
+#Logo.logoLogin #logoTitle {
+  font-size: 72px;
+}
+
 #logoTitle {
   color: #FFF;
   font-family: "Pretendard Variable";
@@ -44,6 +58,7 @@
   align-items: center;
   position: absolute;
   bottom: 0;
+  width: calc(100% - 104px);
   margin-bottom: 50px;
 }
 
@@ -55,5 +70,4 @@
   font-weight: 400;
   line-height: normal;
   margin: 0;
-  width: 100%;
 }
