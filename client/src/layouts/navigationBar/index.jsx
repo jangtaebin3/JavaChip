@@ -1,7 +1,7 @@
 // components/NavigationBar.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './navigationBar.css';
+import './style.css';
 import userIcon from '../../assets/images/userIcon.svg';
 import alertIcon from '../../assets/images/alertIcon.svg';
 import globeIcon from '../../assets/images/globeIcon.svg';

@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+.SuccessHtml{
+    margin-top: 95px;
+    font-family: 'Pretendard-Regular', sans-serif;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.SuccessMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.SuccessBox{
+    width: 580px;
+    height: 320px;
+    margin-bottom:100px;
+    border-radius:12px;
+    margin: 0px;
+    background-color: #1a1a16;
+    box-shadow: 0px 0px 54px 16px rgba(0, 0, 0, 0.25);
+}
+
+.BoxMainText{
+    margin-top:55px;
+    margin-bottom:10px; 
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    color:#ffffff;
+}
+.BoxSubText1{
+    margin:0;
+    margin-bottom: 80px;
+    font-size:16px;
+    font-weight:400;
+    color:#ffffff;
+}
+.ToLoginButton{
+    border:none;
+    padding: 0 15px;
+    border-radius: 10px;
+    margin:5px;
+    align-items: center;
+    width:200px;
+    height:40px;
+    background: rgba(255, 255, 255, 0.40);
+    color:#ffcc01;
+}
+
+.ToMainButton{
+    border:none;
+    padding: 0 15px;
+    align-items: center;
+
+    border-radius: 10px;
+    margin:5px;
+    width:200px;
+    height:40px;
+    background: #715B00;
+    color:#ffffff;
+}
+
+.ToLoginButton:hover{
+    background:#ffcc01;
+    color:black;
+
+}
+.ToMainButton:hover{
+    background:#ffcc01;
+    color:black;
+}

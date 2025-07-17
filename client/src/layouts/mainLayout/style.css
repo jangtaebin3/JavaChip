@@ -1,0 +1,13 @@
+.mainLayout {
+  background-color: #1E1E1E;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPageContent {
+  width: 100%;
+  flex: 1;
+  background-color: #1E1E1E;
+  /* 메인 페이지는 흰색 배경 제거 */
+}
