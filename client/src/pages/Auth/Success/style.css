@@ -5,31 +5,21 @@
     font-style: normal;
 }
 .SuccessHtml{
-    margin: 0;
-    padding: 0;
+    margin-top: 95px;
     font-family: 'Pretendard-Regular', sans-serif;
     display:block;
-
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    width: 100vw;
 }
-.SuccessHeader{
-    size:0;
-}
-.SuccessMain{
-    width: 100%;
-    max-width: 1440px;
-    height: 1024px;
-    display: flex;
 
+.SuccessMain{
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: #FFFFFF;
 }
+
 .SuccessBox{
     width: 580px;
     height: 320px;
@@ -42,7 +32,7 @@
 
 .BoxMainText{
     margin-top:55px;
-    margin-bottom:80px; 
+    margin-bottom:10px; 
     font-size: 36px;
     font-weight: 800;
     text-align: center;
@@ -50,13 +40,14 @@
 }
 .BoxSubText1{
     margin:0;
+    margin-bottom: 80px;
     font-size:16px;
     font-weight:400;
     color:#ffffff;
 }
 .ToLoginButton{
     border:none;
-    padding:15px;
+    padding: 0 15px;
     border-radius: 10px;
     margin:5px;
     align-items: center;
@@ -68,7 +59,7 @@
 
 .ToMainButton{
     border:none;
-    padding:15px;
+    padding: 0 15px;
     align-items: center;
 
     border-radius: 10px;
