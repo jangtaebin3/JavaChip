@@ -14,6 +14,7 @@ const Register = () => {
     privacy: false,
   });
 
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,10 +25,57 @@ const Register = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // 회원가입 처리 로직 추가
-    navigate("/auth/success");
+    
+    // 유효성 검사
+    if (!form.username || !form.password || !form.name || !form.nickname || !form.email) {
+      alert("모든 필수 항목을 입력해주세요.");
+      return;
+    }
+
+    if (!form.terms || !form.privacy) {
+      alert("약관에 동의해주세요.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      // 서버로 보낼 데이터 (체크박스 제외)
+      const requestData = {
+        username: form.username,
+        password: form.password,
+        name: form.name,
+        nickname: form.nickname,
+        email: form.email
+      };
+
+      const response = await fetch('/auth/saveac', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData)
+      });
+
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log('회원가입 성공:', responseData);
+        
+        // 성공 페이지로 이동
+        navigate("/auth/success");
+      } else {
+        const errorData = await response.json();
+        console.error('회원가입 실패:', errorData);
+        alert('회원가입에 실패했습니다. 다시 시도해주세요.');
+      }
+    } catch (error) {
+      console.error('네트워크 오류:', error);
+      alert('네트워크 오류가 발생했습니다. 다시 시도해주세요.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -44,6 +92,7 @@ const Register = () => {
             placeholder="아이디*"
             value={form.username}
             onChange={handleChange}
+            disabled={isLoading}
           />
           <Input
             type="password"
@@ -54,6 +103,7 @@ const Register = () => {
             placeholder="비밀번호*"
             value={form.password}
             onChange={handleChange}
+            disabled={isLoading}
           />
         </div>
         <div className="UserInfo">
@@ -66,6 +116,7 @@ const Register = () => {
             placeholder="이름*"
             value={form.name}
             onChange={handleChange}
+            disabled={isLoading}
           />
           <Input
             type="text"
@@ -76,6 +127,7 @@ const Register = () => {
             placeholder="닉네임*"
             value={form.nickname}
             onChange={handleChange}
+            disabled={isLoading}
           />
           <Input
             type="email"
@@ -86,6 +138,7 @@ const Register = () => {
             placeholder="이메일*"
             value={form.email}
             onChange={handleChange}
+            disabled={isLoading}
           />
         </div>
         <div className="checkboxes">
@@ -96,6 +149,7 @@ const Register = () => {
               required
               checked={form.terms}
               onChange={handleChange}
+              disabled={isLoading}
             />
             서비스 이용약관에 동의합니다
           </label>
@@ -106,13 +160,18 @@ const Register = () => {
               required
               checked={form.privacy}
               onChange={handleChange}
+              disabled={isLoading}
             />
             개인정보처리방침에 동의합니다
           </label>
         </div>
         <div className="registerButtonField">
-          <button type="submit" className="registerButton">
-            회원가입하기
+          <button 
+            type="submit" 
+            className="registerButton"
+            disabled={isLoading}
+          >
+            {isLoading ? "회원가입 중..." : "회원가입하기"}
           </button>
         </div>
       </form>
