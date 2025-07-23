@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
 import Input from "../../../components/common/input";
 import "./style.css";
 
@@ -10,6 +11,7 @@ const Login = () => {
   })
 
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -24,7 +26,9 @@ const Login = () => {
 
     if (form.userid && form.userpw) {
       console.log("로그인 정보:", form);
-      // 로그인 성공 시 메인 페이지로 이동
+      // 로그인 성공 처리
+      login({ userid: form.userid });
+      // 메인 페이지로 이동
       navigate("/");
     } else {
       alert("아이디와 비밀번호를 모두 입력해주세요.");
