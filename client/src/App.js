@@ -1,6 +1,7 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
 import Layout from "./layouts";
 import MainLayout from "./layouts/mainLayout";
 import Auth from "./pages/Auth";
@@ -11,6 +12,7 @@ import Main from "./pages/Main";
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <Routes>
         <Route path="/" element={<MainLayout />}>
@@ -30,6 +32,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    </AuthProvider>
   );
 }
 
