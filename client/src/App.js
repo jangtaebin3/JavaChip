@@ -9,6 +9,7 @@ import Register from "./pages/Auth/Register";
 import Success from "./pages/Auth/Success";
 import Main from "./pages/Main";
 import Community from "./pages/Community";
+import CommunityWrite from "./pages/Community/CommunityWrite";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="analysis" element={<h1>ExpenseAnalysisPage</h1>} />
           <Route path="checklist" element={<h1>ChecklistPage</h1>} />
           <Route path="community" element={<Community />} />
+          <Route path="community/write" element={<CommunityWrite />} />
         </Route>
         <Route path="/auth" element={<Auth />}>
           <Route path="login" element={<Login />} />
