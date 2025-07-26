@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '../../components/common/button';
 import './style.css';
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState('커뮤니티');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // 네비게이션에서 커뮤니티로 이동할 때마다 상태 초기화
+  useEffect(() => {
+    setActiveTab('커뮤니티');
+  }, [location.key]); // location.key는 네비게이션할 때마다 변경됨
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
 
   const handleWritePost = () => {
-    // 글 작성 페이지로 이동하는 로직 (추후 구현)
-    console.log('글 작성하기');
+    navigate('/community/write');
   };
 
   return (
@@ -71,7 +78,7 @@ const Community = () => {
           {/* 내 활동 섹션 */}
           <div className="activity-section">
             <div className="activity-header">
-              <h3 className="activity-title">내 활동 {'>'}</h3>
+              <h3 className="activity-title">내 활동</h3>
             </div>
             
             <div className="activity-tabs">
