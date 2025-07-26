@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '../../components/common/button';
+import userIcon from '../../assets/images/userIcon.svg';
+import rightArrow from '../../assets/images/rightArrow.svg';
 import './style.css';
 
 const Community = () => {
@@ -55,9 +57,7 @@ const Community = () => {
             <h3 className="profile-title">내 프로필</h3>
             <div className="profile-info">
               <div className="profile-avatar">
-                <div className="avatar-circle">
-                  <div className="avatar-icon">👤</div>
-                </div>
+                <img src={userIcon} alt="User Avatar" />
               </div>
               <div className="profile-name">사용자 이름</div>
             </div>
@@ -89,6 +89,7 @@ const Community = () => {
                 onClick={() => handleTabClick('내가 쓴 글')}
               >
                 내가 쓴 글 12
+                <img src={rightArrow} alt="Right Arrow" className="activity-icon" />
               </Button>
               
               <Button
@@ -98,6 +99,7 @@ const Community = () => {
                 onClick={() => handleTabClick('내가 쓴 댓글')}
               >
                 내가 쓴 댓글 35
+                <img src={rightArrow} alt="Right Arrow" className="activity-icon" />
               </Button>
               
               <Button
@@ -107,6 +109,7 @@ const Community = () => {
                 onClick={() => handleTabClick('저장된 글')}
               >
                 저장된 글 7
+                <img src={rightArrow} alt="Right Arrow" className="activity-icon" />
               </Button>
             </div>
           </div>
