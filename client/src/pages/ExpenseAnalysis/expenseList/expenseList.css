@@ -1,0 +1,62 @@
+.EAEAList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    font-family: "Pretendard Variable";
+    font-size: 28px;
+    font-weight: 700;
+    gap:20px;
+}
+
+.EAdata {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 30px;
+    
+    color:white;
+    gap:10px;
+    
+}
+
+
+.indexCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    aspect-ratio: 1/1;
+    border-radius:50%;
+    background-color: #202020;
+ 
+    font-size: 24px;
+    font-weight:700;
+}
+
+ .dataRect {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    min-width: 0; 
+
+    height:24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #202020;
+    
+    font-size: 20px;
+    font-weight: 600;
+}
+.dataRectCategory,
+.dataRectPrice {
+    overflow:hidden;
+    text-overflow:unset;
+    white-space: nowrap;
+}

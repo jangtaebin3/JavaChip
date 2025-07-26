@@ -8,7 +8,7 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Success from "./pages/Auth/Success";
 import Main from "./pages/Main";
-
+import Calender from "./pages/ExpenseAnalysis/ExpenseAnalysis";
 function App() {
   return (
     <Router>
@@ -17,7 +17,7 @@ function App() {
           <Route index element={<Main />} />
         </Route>
         <Route path="/" element={<Layout />}>
-          <Route path="calendar" element={<h1>calendar</h1>} />
+          <Route path="calendar" element={<Calender/>} />
           <Route path="expenses" element={<h1>ExpenseListPage</h1>} />
           <Route path="analysis" element={<h1>ExpenseAnalysisPage</h1>} />
           <Route path="checklist" element={<h1>ChecklistPage</h1>} />
