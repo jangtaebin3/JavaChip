@@ -1,0 +1,132 @@
+/* 글 작성 페이지 전체 컨테이너 */
+.write-container {
+  margin: 0;
+  border-radius: 20px;
+  padding: 50px 55px;
+  background-color: #ffffff;
+}
+
+/* 헤더 */
+.write-header {
+  margin-bottom: 40px;
+}
+
+.write-title {
+  font-family: "Pretendard Variable";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  color: #111827;
+}
+
+/* 메인 콘텐츠 */
+.write-content {
+  margin: 0 auto;
+}
+
+.write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #B2B2B2;
+  border-radius: 20px;
+  padding: 25px 30px 30px;
+}
+
+.write-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.write-form-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.write-form-input:focus {
+  border-color: #FFCC01;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.write-form-input::placeholder {
+  color: #9ca3af;
+}
+
+.write-form-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: "Pretendard Variable";
+  font-size: 16px;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  resize: vertical;
+  min-height: 400px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+.write-form-textarea:focus {
+  border-color: #FFCC01;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.write-form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* 액션 버튼들 */
+.write-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.write-cancel-button {
+  color: #6b7280 !important;
+  background-color: transparent !important;
+  border: 2px solid #d1d5db !important;
+  font-family: "Pretendard Variable" !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+}
+
+.write-cancel-button:hover {
+  background-color: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.write-submit-button {
+  background-color: #fbbf24 !important;
+  color: #000000 !important;
+  font-family: "Pretendard Variable" !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  border: none !important;
+}
+
+.write-submit-button:hover {
+  background-color: #f59e0b !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
