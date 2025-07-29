@@ -1,0 +1,94 @@
+/* 페이지네이션 컨테이너 */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 0;
+  font-family: "Pretendard Variable", sans-serif;
+}
+
+/* 공통 버튼 스타일 */
+.pagination-arrow,
+.pagination-number {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 8px 12px;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* 화살표 버튼 */
+.pagination-arrow {
+  color: #b2b2b2;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 8px;
+  min-width: 28px;
+}
+
+.pagination-arrow:hover:not(.disabled) {
+  color: #666666;
+  background-color: #f5f5f5;
+}
+
+.pagination-arrow.disabled {
+  color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* 페이지 번호 버튼 */
+.pagination-number {
+  color: #b2b2b2;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pagination-number:hover:not(.active) {
+  color: #666666;
+  background-color: #f5f5f5;
+}
+
+/* 현재 페이지 (활성 상태) */
+.pagination-number.active {
+  color: #000000;
+  font-weight: 700;
+  cursor: default;
+  background-color: transparent;
+}
+
+.pagination-number.active:hover {
+  background-color: transparent;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .pagination-container {
+    gap: 4px;
+    padding: 16px 0;
+  }
+  
+  .pagination-arrow,
+  .pagination-number {
+    font-size: 14px;
+    padding: 6px 8px;
+    min-width: 28px;
+    height: 28px;
+  }
+  
+  .pagination-arrow {
+    font-size: 16px;
+    min-width: 24px;
+  }
+}
