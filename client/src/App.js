@@ -11,6 +11,8 @@ import Main from "./pages/Main";
 import Community from "./pages/Community";
 import CommunityWrite from "./pages/Community/CommunityWrite";
 
+import './styles/colors.css';
+
 function App() {
   return (
     <Router>
