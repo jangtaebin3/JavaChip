@@ -1,0 +1,8 @@
+.addModalContainer{
+    display: flex;
+    width:210px;
+    height:360px;
+    padding: 28px 40px;
+    align-items: center;
+    gap: 10px;
+}

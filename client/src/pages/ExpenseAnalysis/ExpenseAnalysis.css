@@ -5,22 +5,8 @@
     font-weight: 400;
     font-style: normal;
 }
-.EAOverlayOn{
-    display:flex;
-    width:100%;
-    height:100%;
-    fill: rgba(0, 0, 0, 0.50);
-}
-.EAOverlayOff{
-    display:flex;
-    width:100%;
-    height:100%;
-}
-.EAOverlay{
-    display:flex;
-    width:100%;
-    height:100%;
-}
+
+
 .EAcontainer {
     display: flex;
     flex-direction: row;
@@ -33,14 +19,24 @@
 }
 
 .EAaside {
-    width: 20%;
+    width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.EAasideopen {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 111111;
 
+    fill: rgba(0, 0, 0, 0.778);
+}
 .EAasideTab {
     display:flex;
     flex-direction: column;
@@ -51,23 +47,25 @@
 }
 
 .EAcalendar {
+    position:relative;
     border-radius: 20px;
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 75%;
     height: 100%;
     display: flex;
-
     align-items: center;
     background: var(--sub, #FFE169);
 }
 
 .EAModal{
+    
     display:flex;
+    position:fixed;
+    fill: rgba(0, 0, 0, 0.778);
 }
 
 .monthExpenseContainer{
-    transition:.4s;
 
     display: flex;
     flex-direction: column;
@@ -80,24 +78,20 @@
     font-weight: 700;
 }
 .consumptionBton{
-    transition:.4s;
-
     display: flex;
     align-items: center;
     padding: 10px 20px;
 
-    transform: scale(1.01);
-    flex-shrink: 0;
+    transform: scale(1.01) ;
     border:none;
     border-radius: 12px;
     background: #FFF;
     color:black;
     box-shadow: 0 4.779px 8.721px 0 rgba(0, 0, 0, 0.25);
-    
+
+    transition-duration:3s;
 }
 .consumptionBtoff{
-    transition:.4s;
-
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -107,7 +101,7 @@
     border:none;
     background-color:#202020;
 
-    color:white;
+    color:white;  
 }
 .consumptionSum{
     display: flex;

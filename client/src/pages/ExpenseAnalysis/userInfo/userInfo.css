@@ -24,6 +24,9 @@
     color: black;
     height: 60px;
 }
+.EAtoLogin>.EAuserName:hover{
+    text-decoration: underline;
+}
 .EAuserName{
     font-size: 28px;
     font-weight: 700;

@@ -8,6 +8,25 @@
     font-size: 28px;
     font-weight: 700;
     gap:20px;
+   
+
+}
+.expenseList{
+    display: flex;
+
+    flex-direction: column;
+    width: 100%;
+    max-height: 200px;
+    padding: 0;
+    font-family: "Pretendard Variable";
+    font-size: 28px;
+    font-weight: 700;
+    gap:20px;
+    overflow: scroll;
+    border-radius: 10px;
+}.expenseList::-webkit-scrollbar{
+    display:none;
+
 }
 
 .EAdata {
@@ -18,8 +37,9 @@
     height: 30px;
     
     color:white;
-    gap:10px;
-    
+
+    margin-top: 10px;
+    gap:0 10px;
 }
 
 
@@ -41,7 +61,8 @@
  .dataRect {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 30px;
 
     width: 100%;
     min-width: 0; 
@@ -54,6 +75,7 @@
     font-size: 20px;
     font-weight: 600;
 }
+
 .dataRectCategory,
 .dataRectPrice {
     overflow:hidden;

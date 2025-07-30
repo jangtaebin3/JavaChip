@@ -7,19 +7,25 @@
 //구체적인 기능은 ExpenseAnalysis.jsx에서 구현
 import './expenseList.css';
 
-const ExpenseList = ({ category, categoryIndex, sum }) => {
+const ExpenseList = ({ exampleData }) => {
+    console.log("Rendering ExpenseList");
     return (
         <div className="EAEAList">
             <div className="expenseAnalysisText">지출분석</div>
-            <div className="EAdata">
-                <div className="indexCircle">
-                    {categoryIndex}
+            <div className='expenseList'>
+            {exampleData.map(([category, amount], index) => ( 
+                <div className="EAdata">
+                    <div className="indexCircle">
+                        {index+1}
+                    </div>
+                    <div className="dataRect">
+                        <div className='dataRectCategory'>{category}</div>
+                        <div className='dataRectPrice'>{"-"+amount.toLocaleString()}</div>
+                    </div>
                 </div>
-                <div className="dataRect">
-                    <span className='dataRectCategory'>{category}</span>
-                    <span className='dataRectPrice'>{"- "+sum.toLocaleString()}</span>
-                </div>
-            </div>
-        </div>);
+            ))} 
+        </div>
+        </div>
+        );
 }
 export default ExpenseList;
