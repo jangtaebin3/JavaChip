@@ -1,0 +1,50 @@
+/*ChecklistBox.css*/
+.checklistbox {
+    width: 520px;
+    border-radius: 20px;
+    background-color: #333; 
+}
+
+.checklist-ul {
+    padding: 12px 30px;
+}
+
+.no-item {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+/*ChecklistItem.css*/
+.checklist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    padding: 12px 0;
+}
+
+.checklist-item.checked .checklist-text {
+    color: #888; /* 회색 처리 */
+    text-decoration: line-through;
+}
+
+.checklist-text {
+    flex-grow: 1;
+    font-size: 16px;
+
+}
+
+.checklist-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.arrow {
+    top: 10px;
+}

@@ -1,0 +1,63 @@
+.page-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+
+.checklist-page {
+    width: 600px;
+    height: 800px;
+    margin-top : 58px;
+}
+
+.checklist-header{
+    display: flex;
+    align-items: flex-start;
+    margin-top: -20px;
+}
+.edit-button {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 80px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: #ffcc01;
+}
+#writer {
+    position: relative;
+    top: 2px;
+    margin-left: 4px;
+}
+
+.checklist-main {
+    max-height: 560px;
+    overflow: auto;
+    padding-right: 0px;
+}
+.checklist-main::-webkit-scrollbar {
+    width: 0px;
+}
+.checklist-main::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+
+/*메모 부분*/
+.memo-page {
+    display: flex;
+    width: 600px;
+    height: 800px;
+    margin-left: 30px;
+    margin-top: 120px;
+}
