@@ -1,0 +1,136 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 25px 14px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post-item:hover {
+  background-color: #f9f9f9;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.post-title {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #000000;
+  margin: 0;
+  flex: 1;
+}
+
+.post-author {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #000000;
+  min-width: 80px;
+  text-align: center;
+}
+
+.post-date {
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #000000;
+  min-width: 100px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.like-button,
+.bookmark-button {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.like-button {
+  width: 70px;
+  justify-content: flex-end;
+}
+
+.like-icon,
+.bookmark-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.like-count {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .post-item {
+    padding: 12px 0;
+  }
+  
+  .post-content {
+    gap: 12px;
+  }
+  
+  .post-title {
+    font-size: 16px;
+  }
+  
+  .post-author {
+    font-size: 14px;
+    min-width: 60px;
+  }
+  
+  .post-actions {
+    gap: 8px;
+  }
+  
+  .like-button,
+  .bookmark-button {
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+}
