@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '../../components/common/button';
 import Pagination from '../../components/common/pagination';
+import PostList from '../../components/contentList/postList';
 import userIcon from '../../assets/images/userIcon.svg';
 import rightArrow from '../../assets/images/rightArrow.svg';
 import './style.css';
@@ -9,19 +10,19 @@ import './style.css';
 const Community = () => {
   const [activeTab, setActiveTab] = useState('커뮤니티');
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages] = useState(8); // API 연결 전까지는 2페이지로 고정
+  const [totalPages] = useState(8);
   const location = useLocation();
   const navigate = useNavigate();
 
   // 네비게이션에서 커뮤니티로 이동할 때마다 상태 초기화
   useEffect(() => {
     setActiveTab('커뮤니티');
-    setCurrentPage(1); // 페이지도 1페이지로 초기화
-  }, [location.key]); // location.key는 네비게이션할 때마다 변경됨
+    setCurrentPage(1);
+  }, [location.key]);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
-    setCurrentPage(1); // 탭 변경 시 1페이지로 초기화
+    setCurrentPage(1);
   };
 
   const handleWritePost = () => {
@@ -30,6 +31,49 @@ const Community = () => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+  };
+
+  const handlePostClick = (post) => {
+    console.log('게시글 클릭:', post);
+    // 추후 게시글 상세 페이지로 이동
+  };
+
+  const handleLikeClick = (postId) => {
+    console.log('좋아요 클릭:', postId);
+    // 추후 좋아요 API 호출
+  };
+
+  const handleBookmarkClick = (postId) => {
+    console.log('북마크 클릭:', postId);
+    // 추후 북마크 API 호출
+  };
+
+  const renderContent = () => {
+    let postType = 'all'; // 기본값: 전체 글
+    
+    switch (activeTab) {
+      case '내가 쓴 글':
+        postType = 'myPosts';
+        break;
+      case '내가 쓴 댓글':
+        postType = 'myComments';
+        break;
+      case '저장된 글':
+        postType = 'savedPosts';
+        break;
+      default:
+        postType = 'all';
+    }
+
+    return (
+      <PostList
+        type={postType}
+        onPostClick={handlePostClick}
+        onLikeClick={handleLikeClick}
+        onBookmarkClick={handleBookmarkClick}
+        className="community-post-list"
+      />
+    );
   };
 
   return (
@@ -44,22 +88,7 @@ const Community = () => {
         {/* 왼쪽: 현재 선택된 탭의 내용 표시 */}
         <div className="content-section">
           <div className="content-main">
-            <div className="content-placeholder">
-              {activeTab === '커뮤니티' ? (
-                <>
-                  <h2>커뮤니티에 오신 것을 환영합니다!</h2>
-                  <p>우측 메뉴에서 원하는 활동을 선택해주세요.</p>
-                  <p>내가 쓴 글, 댓글, 저장된 글을 확인할 수 있습니다.</p>
-                  <p>현재 페이지: {currentPage}/{totalPages}</p>
-                </>
-              ) : (
-                <>
-                  <h2>{activeTab} 목록입니다</h2>
-                  <p>이 영역에 {activeTab}에 해당하는 컴포넌트가 들어갈 예정입니다.</p>
-                  <p>현재 페이지: {currentPage}/{totalPages}</p>
-                </>
-              )}
-            </div>
+            {renderContent()}
           </div>
 
           {/* 모든 탭에서 페이지네이션 표시 (하단 고정) */}
