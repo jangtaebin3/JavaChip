@@ -1,4 +1,4 @@
-import './userInfo.css';
+import './style.css';
 const UserProfile = ({isLogin,userIcon,userName}) => {
     console.log("Rendering UserProfile");
     return isLogin ? (
@@ -11,7 +11,9 @@ const UserProfile = ({isLogin,userIcon,userName}) => {
         <div className="EAuserInfo">
             <a className="EAtoLogin" href="/client/src/pages/Auth/Login/index.jsx">
                 <img className="EAuserIcon" alt='userIcon' src={userIcon} />
-                <div className="EAuserName">{userName}</div>
+                <div 
+                
+                className="EAuserName">{userName}</div>
             </a>
         </div>
     );

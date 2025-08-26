@@ -10,6 +10,7 @@
 .EAcontainer {
     display: flex;
     flex-direction: row;
+    justify-content:space-between;
     width: 100%;
     min-width: 1200px;
     height: 100%;
@@ -19,30 +20,33 @@
 }
 
 .EAaside {
-    width: 25%;
-    height: 100%;
+    width: 353px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom:25px;
 }
-.EAasideopen {
-    width: 25%;
-    height: 100%;
+.EAasideOpen {
+    width: 353px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 111111;
-
-    fill: rgba(0, 0, 0, 0.778);
+    position: relative;
+    bottom:25px;
+    
 }
 .EAasideTab {
     display:flex;
     flex-direction: column;
-    width:90%;
+    width:252px;
     height: 600px;
     gap:60px;
+    padding:10px;
 
 }
 
@@ -92,6 +96,7 @@
     transition-duration:3s;
 }
 .consumptionBtoff{
+    transition-duration: .3s;
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -100,8 +105,15 @@
     border-radius: 10px;
     border:none;
     background-color:#202020;
+    box-shadow: 0 4.779px 8.721px 0 rgba(0, 0, 0, 0.25);
 
     color:white;  
+}
+.consumptionBtoff:hover{
+    transition-duration: .3s;
+    transform: scale(1.02); 
+
+
 }
 .consumptionSum{
     display: flex;

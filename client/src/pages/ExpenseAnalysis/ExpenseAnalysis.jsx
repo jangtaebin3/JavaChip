@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
-import Calendar from './calendar/calendar.jsx';
-import ExpenseList from './expenseList/expenseList.jsx';
-import UserProfile from './userInfo/userInfo.jsx';
-import EAModal from './modal/EAModal.jsx';
-import './ExpenseAnalysis.css';
+import Calendar from '../../components/common/expenseAnalysis/calendar/index.jsx';
+import ExpenseList from '../../components/common/expenseAnalysis/expenseList/index.jsx';
+import UserProfile from '../../components/common/expenseAnalysis/userInfo/index.jsx';
+import EAModal from '../../components/common/expenseAnalysis/EAModal/index.jsx';
+import './style.css';
 
 
 
@@ -12,7 +12,7 @@ const ExpenseAnalysis = () => {//당 월 1일부터 31일 혹은 30일까지의 
 let userId = ""
 let userPW = "examplePW"
 
-const exampleExpenseData=[["식비",24200],["교통비", 123000],["쇼핑",434000],["보험,적금",700000],["구독료",38900]];
+const exampleExpenseData=[["식비",24200],["교통비", 123000],["쇼핑",434000],["보험,적금",700000],["구독료",38900],["기타", 20000]];
 const exampleImportData=[["송금",24200],["이자", 2000],["월급",4340000],["ㅇㅇ",700000],["bb",38900]];
 
 const [isLogin, setIsLogin] = useState(false)
@@ -23,17 +23,6 @@ const [select, setSelect] = useState("")
 
 //월별 소비현황
 const MonthExpense = ({ consumptionExpense, consumptionImport }) => {
-  const MonthExpenseButton=()=>{
-    return(<div className='monthExpenseButton'><button
-        className={`consumptionBt${select === "수입" ? "on" : "off"}`}
-        onClick={() => {            
-            setSelect(select === "수입" ?"" : "수입");
-            setOpenModal(openModal?setOpenModal(false):setOpenModal(true)); 
-          }}
-      ></button>
-      </div>);
-  }
-
   return (
     <div className='monthExpenseContainer'>
       <div className="consumptionText">월별 소비현황</div>
@@ -85,18 +74,19 @@ const MonthExpense = ({ consumptionExpense, consumptionImport }) => {
     }, [isLogin,userId,userPW,userName,userProfileIcon]);
     return (
     
-      <div className='EAcontainer'>
+      <div className={`EAcontainer${openModal?'Open':''}`}>
         <div className='EAmodal'> 
-          <EAModal select={select} modalExpenseList={exampleExpenseData} modalImportList={exampleImportData} openModal={true}/>
+          <EAModal select={select} modalExpenseList={exampleExpenseData} modalImportList={exampleImportData} openModal={true} onClose={()=>{setOpenModal(false); setSelect('');}} onChange={(change)=>setSelect(change)}/>
+          
         </div>
-          <div className={`EAaside${openModal?'open':''}`}>
+          <div className={`EAaside${openModal?'Open':''}`}>
               <div className='EAasideTab'>
                   <UserProfile isLogin={isLogin} userIcon={userProfileIcon} userName={userName} /> 
                   <MonthExpense consumptionExpense={(exampleExpenseData || []).reduce((acc, [_, amount]) => acc + amount, 0)} consumptionImport={(exampleImportData || []).reduce((acc, [_, amount]) => acc + amount, 0)} />
                   <ExpenseList exampleData={exampleExpenseData} />
               </div>
           </div>
-          <div className={`EAcalendar${openModal?'open':''}`}>
+          <div className={`EAcalendar${openModal?'Open':''}`}>
               <Calendar />
           </div>
         </div>

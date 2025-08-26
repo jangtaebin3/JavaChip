@@ -5,7 +5,7 @@
 
 //여기선 그냥 내모랑 내용 출력하는거로 
 //구체적인 기능은 ExpenseAnalysis.jsx에서 구현
-import './expenseList.css';
+import './style.css';
 
 const ExpenseList = ({ exampleData }) => {
     console.log("Rendering ExpenseList");
@@ -20,12 +20,12 @@ const ExpenseList = ({ exampleData }) => {
                     </div>
                     <div className="dataRect">
                         <div className='dataRectCategory'>{category}</div>
-                        <div className='dataRectPrice'>{"-"+amount.toLocaleString()}</div>
+                        <div className='dataRectPrice' >{"-"+amount.toLocaleString()}</div>
                     </div>
                 </div>
             ))} 
         </div>
         </div>
-        );
+    );
 }
 export default ExpenseList;

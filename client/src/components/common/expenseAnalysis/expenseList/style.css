@@ -16,7 +16,7 @@
 
     flex-direction: column;
     width: 100%;
-    max-height: 200px;
+    max-height: 150px;
     padding: 0;
     font-family: "Pretendard Variable";
     font-size: 28px;
@@ -81,4 +81,9 @@
     overflow:hidden;
     text-overflow:unset;
     white-space: nowrap;
+}
+
+
+.expenseAnalysisText{
+    margin-top: 30px;
 }

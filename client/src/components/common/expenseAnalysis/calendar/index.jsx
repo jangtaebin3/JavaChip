@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './calender.css'
+import './style.css'
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, format, isSameMonth, isSunday, getMonth, setMonth} from 'date-fns';
 const Calendar = () => {
   console.log("Rendering Calendar");
@@ -7,7 +7,7 @@ const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const days = ['SUN', 'MON', 'TUE ', 'WED', 'THU', 'FRI', 'SAT'];
-  const exampleExpense = [["2025-04-23", 24000,400000],["2025-07-07", 32000, 200000],["2025-08-13", 2200000, 243000]];
+  // const exampleExpense = [["2025-04-23", 24000,400000],["2025-07-07", 32000, 200000],["2025-08-13", 2200000, 243000]];
 
   //캘린더 해더
   const CalendarHeader = ({ date, setDate }) => {
@@ -41,46 +41,58 @@ const Calendar = () => {
 // document.getElementById("mySelect")로 셀렉트 값 가져올수있음
   //캘린더 그리드
   const CalendarGrid = ({ date }) => {
-    const startDate = startOfWeek(startOfMonth(date));
-    const endDate = endOfWeek(endOfMonth(date));
-    const days = [];
+  const startDate = startOfWeek(startOfMonth(date));
+  const endDate = endOfWeek(endOfMonth(date));
+  const days = [];
 
-    let current = startDate;
-    while (current <= endDate) {
-      days.push(new Date(current));      
-      current = addDays(current, 1);
+  let current = startDate;
+  while (current <= endDate) {
+    days.push(new Date(current));      
+    current = addDays(current, 1);
+  }
+
+  const [selectedIdx, setSelectedIdx] = useState(currentDate);
+
+  const CalendarCell = ({ date, isCurrentMonth, idx }) => {
+    function dailyExpenseImport(){
+      return isCurrentMonth ? (
+        <div className='daily-expense-import'>  
+          <div className='daily-expense'>소비</div>          
+          <div className='daily-import'>수입</div>
+        </div>
+      ) : null;
     }
 
-    //캘린더 각 날짜
-    const CalendarCell = ({ date, isCurrentMonth,idx }) => {
-      const [isSelected,setIsSelected]=useState(false);
-      function dailyExpenseImport(){
-        return isCurrentMonth?(
-          <div className='daily-expense-import'>  
-              <div className='daily-expense'>소비</div>          
-              <div className='daily-import'>수입</div>
-          </div>
-        ):(null);
-      }
-
-      return (
-        <button className={`calendar-cell ${isCurrentMonth ? '' : 'dimmed' }${isSelected?'selected':''}${idx}`} onClick={()=>setIsSelected(!isSelected)}>
-          <div className={`date-number${isCurrentMonth?'':'-dimmed'}${isSunday(date)&&!isCurrentMonth?'-past':''}${ isSunday(date)&&isCurrentMonth?'-sunday':''}`}>{format(date, 'd')}</div>
-          {dailyExpenseImport()}
-        </button>
-      );
-    };
     return (
-      <div className="calendar-grid">
-        <div className='calendar-grid-cell'>
-        {days.map((day, idx) => (
-          <CalendarCell key={idx} date={day} isCurrentMonth={isSameMonth(day, date)} idx={idx}/>
-        ))}
+      <button
+        className={`calendar-cell ${isCurrentMonth ? '' : 'dimmed'} ${selectedIdx === idx ? 'selected' : ''}`}
+        onClick={() => setSelectedIdx(idx)}
+      >
+        <div
+          className={`date-number${isCurrentMonth?'':'-dimmed'}${isSunday(date)&&!isCurrentMonth?'-past':''}${ isSunday(date)&&isCurrentMonth?'-sunday':''}`}
+        >
+          {format(date, 'd')}
         </div>
-      </div>
+        {dailyExpenseImport()}
+      </button>
     );
   };
-  
+
+  return (
+    <div className="calendar-grid">
+      <div className='calendar-grid-cell'>
+        {days.map((day, idx) => (
+          <CalendarCell
+            key={idx}
+            date={day}
+            isCurrentMonth={isSameMonth(day, date)}
+            idx={idx}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
   //캘린더 요일
   const CalendarWeekDays = () => {
     return (
