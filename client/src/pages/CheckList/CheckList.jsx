@@ -20,7 +20,7 @@ const checklistData = [{
 
 const ChecklistPage = () => {
     const [data, setData] = useState(checklistData);
-    
+    const [isEditing, setIsEditing] = useState(false);
 
     //체크리스트 항목을 다음 날로 이동
     const handleMoveTaskToNextDay = (monthIndex, dayIndex, taskIndex) => {
@@ -40,7 +40,7 @@ const ChecklistPage = () => {
         });
     };
 
-    //항목 삭제 기능
+    //항목 삭제 기능 (수정모드)
     const handleDeleteTask = (monthIndex, dayIndex, taskIndex) => {
         setData(prev => {
             const newData = JSON.parse(JSON.stringify(prev));
@@ -49,16 +49,37 @@ const ChecklistPage = () => {
         });
     }   
 
+    //항목 추가 (수정모드)
+    const handleAddTask = (monthIndex, dayIndex, newTask) => {
+        if (!newTask.trim()) return;
+        setData(prev => {
+            const newData = JSON.parse(JSON.stringify(prev));
+            newData[monthIndex].days[dayIndex].tasks.push(newTask);
+            return newData;
+        });
+    };
+
+    //항목 수정 (수정모드)
+    const handleUpdateTask = (monthIndex, dayIndex, taskIndex, newText) => {
+        setData(prev=> {
+            const newData = JSON.parse(JSON.stringify(prev));
+            newData[monthIndex].days[dayIndex].tasks[taskIndex] = newText;
+            return newData;
+        })
+    };
+
     return (
         <div className='page-container'>
             <div className="checklist-page">
-                <h2 style={{ fontSize: '28px', fontWeight: 700 }}>체크리스트</h2>
+                <h2 style={{ fontSize: '28px', fontWeight: 700, marginTop: '0px'}}>체크리스트</h2>
                 {data.map((monthData, monthIdx) => (
                     <div key={monthData.month}>
                         <div className='checklist-header'>
                             <h2>{monthData.month}</h2>
-                            <button className='edit-button' onClick={() => alert('수정 모드로 전환!')}>
-                                수정하기<img src={writer} alt="writer" id='writer'/>
+                            <button className='edit-button' 
+                            onClick={() => setIsEditing(!isEditing)}>
+                                {isEditing ? '수정완료' : '수정하기'}
+                                <img src={writer} alt="writer" id='writer'/>
                             </button>
                         </div>
                         <div className='checklist-main'>
@@ -70,8 +91,16 @@ const ChecklistPage = () => {
                                 tasks={day.tasks}
                                 onMoveTask={(taskIndex) =>
                                     handleMoveTaskToNextDay(monthIdx, dayIdx, taskIndex)
-                                } onDeleteTask={(taskIndex) =>
+                                }
+                                onDeleteTask={(taskIndex) =>
                                     handleDeleteTask(monthIdx, dayIdx, taskIndex)
+                                }
+                                isEditing={isEditing}
+                                onAddTask={(newTask) =>
+                                    handleAddTask(monthIdx, dayIdx, newTask)
+                                }
+                                onUpdateTask={(taskIndex, newText) =>
+                                    handleUpdateTask(monthIdx, dayIdx, taskIndex, newText)
                                 }/>                       
                             ))}
                         </div>

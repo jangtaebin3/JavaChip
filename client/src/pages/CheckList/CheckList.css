@@ -1,9 +1,10 @@
-.page-container{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+.page-container {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
     justify-content: center; /* 가로 중앙 정렬 */
 }
+
 
 .checklist-page {
     width: 600px;
@@ -40,8 +41,9 @@
 }
 
 .checklist-main {
-    max-height: 560px;
-    overflow: auto;
+    max-height: 560px; 
+    margin-top: 15px;
+    overflow: auto; 
     padding-right: 0px;
 }
 .checklist-main::-webkit-scrollbar {

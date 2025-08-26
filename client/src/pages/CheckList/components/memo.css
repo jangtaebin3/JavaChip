@@ -20,7 +20,7 @@
     margin: 25px 0px 0px 35px;
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: -1.5px;;
+    letter-spacing: -1.5px;
 }
 
 .memo-box {
@@ -36,8 +36,65 @@
     background-color: #ffe169;
 }
 
+.memo-write {
+    margin: 0px 0px 0px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    line-height: 1.6;      /* 행간 조절 */
+
+}
+
 #writer {
     position: relative;
     top: 2px;
     margin-left: 4px;
 }
+
+.goal-write-input {
+    width: 83%;
+    height: 30%;
+    margin-left: 34px;
+    margin-top: 19px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: -1.5px;
+    border: none;
+    border-radius: 6px;
+}
+.goal-write-input::placeholder {
+    font-weight: 500;
+}
+
+.memo-write-input {
+    width: 84%;
+    height: 70%;
+    margin-left: 34px;
+
+    font-family: 'Pretendard', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -1.5px;
+    white-space: pre-wrap; /* Enter 키 줄바꿈 적용 */
+    line-height: 1.5;      /* 행간 조절 */
+
+    border: none;
+    border-radius: 6px;
+    resize: none;
+    overflow-y: auto;
+}
+.memo-write-input::placeholder {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+.goal-write-input:focus, .memo-write-input:focus {
+    outline: none;   /* 파란 아웃라인 제거 */
+    background: transparent;
+    border: none;
+    letter-spacing: -1.5px;;
+}
+
+
