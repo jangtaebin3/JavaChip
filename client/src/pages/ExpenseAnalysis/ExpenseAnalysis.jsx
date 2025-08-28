@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import Calendar from '../../components/common/expenseAnalysis/calendar/index.jsx';
-import ExpenseList from '../../components/common/expenseAnalysis/expenseList/index.jsx';
-import UserProfile from '../../components/common/expenseAnalysis/userInfo/index.jsx';
-import EAModal from '../../components/common/expenseAnalysis/EAModal/index.jsx';
+import Calendar from '../../components/expenseAnalysis/calendar/index.jsx';
+import ExpenseList from '../../components/expenseAnalysis/expenseList/index.jsx';
+import UserProfile from '../../components/expenseAnalysis/userInfo/index.jsx';
+import EAModal from '../../components/expenseAnalysis/EAModal/index.jsx';
 import './style.css';
 
 
