@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './ChecklistBox.css'; 
-import check from '../../../assets/images/checklist/check.svg';
-import arrow from '../../../assets/images/checklist/arrow.svg';
+import './style.css'; 
+import check from '../../../../assets/images/checklist/check.svg';
+import arrow from '../../../../assets/images/checklist/arrow.svg';
 
 const ChecklistBox = ({ items, onArrowClick, onDeleteClick, isEditing, onUpdateTask }) => {
     if (items.length === 0 && isEditing) {

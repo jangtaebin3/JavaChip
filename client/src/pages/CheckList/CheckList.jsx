@@ -1,8 +1,8 @@
 import React, { useState } from 'react'; 
 import './CheckList.css'
-import writer from '../../assets/images/checklist/writer.png';
-import DailyChecklist from './components/DailyChecklist'
-import Memo from './components/memo';
+import writer from '../../assets/images/checklist/writer.png'
+import DailyChecklist from './components/DailyChecklist/index.jsx'
+import Memo from './components/Memo/index.jsx'
 
 const checklistData = [{
     month: "7월",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import writer from '../../../assets/images/checklist/writer.png';
-import './memo.css'
+import writer from '../../../../assets/images/checklist/writer.png';
+import './style.css'
 
 const Memo = () => {
     // 편집 상태

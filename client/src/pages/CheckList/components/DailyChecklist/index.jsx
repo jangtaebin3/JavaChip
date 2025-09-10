@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './DailyChecklist.css'
-import ChecklistBox from './ChecklistBox';
+import './style.css'
+import ChecklistBox from '../ChecklistBox/index'
 
 const DailyChecklist = ({date, tasks, onMoveTask, onDeleteTask, isEditing, onAddTask, onUpdateTask }) => {
     const [newTask, setNewTask] = useState('');
